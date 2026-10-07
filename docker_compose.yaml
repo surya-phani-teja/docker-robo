@@ -1,0 +1,11 @@
+services:
+  mongodb: 
+    image: mogodb:v1
+
+networks:
+  default: 
+    driver: bridge
+    name: robo-dock
+    external: false
+
+
