@@ -16,6 +16,7 @@ services:
     image: redis:7.0
     container_name: redis
   mysql:
+    build: ./mysql
     image: mysql:v1
     container_name: mysql
   rabbitmq:
