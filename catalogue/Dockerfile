@@ -18,6 +18,10 @@ RUN npm install
 FROM node:20.19.5-alpine3.22
 WORKDIR /opt/server
 COPY --from=build /opt/server /opt/server
+EXPOSE 8080
+LABEL com.projects="roboshop" \
+      component="catalgue" \
+      created="SURYA"
 ENV MONGO="true" \
     MONGO_URL="mongodb://mongodb:27017/catalogue" 
 CMD ["server.js"]
